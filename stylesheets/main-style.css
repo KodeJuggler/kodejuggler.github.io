@@ -3,7 +3,7 @@
 :root {
   --background-color: #1e1e1e; /* Dark gray background */
   --text-color: #d4d4d4; /* Light gray text */
-  --link-color: #8e8e8e; /* Medium gray links */
+  --link-color: #0a83bb; /* Medium gray links */
   --accent-color: #64b5f6; /* Light blue accent */
 }
 
@@ -61,6 +61,12 @@ h1 {
 }
 
 #title {
+  /* Remove link styles */
+  text-decoration: none; /* Remove underline */
+  color: darkgreen; /* Inherit color from parent, preventing link color */
+}
+
+#copy {
   /* Remove link styles */
   text-decoration: none; /* Remove underline */
   color: darkgreen; /* Inherit color from parent, preventing link color */
