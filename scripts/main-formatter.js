@@ -37,8 +37,15 @@ async function handleRoute() {
       }
 
    } else {
-      // Optionally, handle the case where the 'page' parameter is missing
-      console.log("No 'page' parameter found in the URL.");
+      main = "home.md";
+      try {
+         // Update the content of the div
+         data = await fetchData(main);
+         const parsedmd = marked.parse(data);
+         contentDiv.innerHTML = parsedmd;
+      } catch (error) {
+         console.error('Fetch error:', error);
+      }
    }
 }
 
